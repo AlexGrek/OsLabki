@@ -19,8 +19,9 @@ namespace Terminals
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        public string STR = "sfgsg";
         private int _coins5 = 20;
         public int Coins5
         {
@@ -107,12 +108,15 @@ namespace Terminals
 
         public MainWindow()
         {
+            //this.DataContext = this;
             InitializeComponent();
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Coins1 -= 1;
+            //MessageBox.Show("WEEE");
         }
 
 

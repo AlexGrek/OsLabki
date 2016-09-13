@@ -1,106 +1,107 @@
-﻿<Window x:Class="Terminals.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Terminals"
+        xmlns:Properties="clr-namespace:Terminals.Properties" x:Class="Terminals.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="540">
+        Title="MainWindow" Height="450" Width="540"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0">
-            <Label Content="Terminal A"></Label>
+            <Label Content="Terminal A"/>
             <Grid MaxWidth="134" Height="42" Background="BlanchedAlmond">
-                <Button x:Name="a0" Content="0" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Закрыть" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="a0" Content="0" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Закрыть" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Fuchsia">
-                <Button x:Name="a1" Content="1" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Киев (28)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="a1" Content="1" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Киев (28)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="CornflowerBlue">
-                <Button x:Name="a2" Content="2" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Москали (37)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="a2" Content="2" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Москали (37)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Gainsboro">
-                <Button x:Name="a3" Content="3" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Лондон (50)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="a3" Content="3" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Лондон (50)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Chartreuse">
-                <Button x:Name="a4" Content="4" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Берлин (77)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="a4" Content="4" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Берлин (77)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Aquamarine">
-                <Button x:Name="a5" Content="5" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Париж (91)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="a5" Content="5" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Париж (91)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
         </StackPanel>
         <StackPanel Grid.Column="2">
-            <Label Content="Terminal B"></Label>
+            <Label Content="Terminal B"/>
             <Grid MaxWidth="134" Height="42" Background="BlanchedAlmond">
-                <Button x:Name="b0" Content="0" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Закрыть" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="b0" Content="0" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Закрыть" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Fuchsia">
-                <Button x:Name="b1" Content="1" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Киев (28)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="b1" Content="1" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Киев (28)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="CornflowerBlue">
-                <Button x:Name="b2" Content="2" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Москали (37)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="b2" Content="2" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Москали (37)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Gainsboro">
-                <Button x:Name="b3" Content="3" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Лондон (50)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="b3" Content="3" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Лондон (50)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Chartreuse">
-                <Button x:Name="b4" Content="4" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Берлин (77)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="b4" Content="4" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Берлин (77)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Aquamarine">
-                <Button x:Name="b5" Content="5" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"></Button>
-                <Label Content="Париж (91)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"></Label>
+                <Button x:Name="b5" Content="5" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
+                <Label Content="Париж (91)" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
         </StackPanel>
-        
+
         <!--CENTER_TERMINAL-->
         <StackPanel Grid.Column="1" Background="Azure">
-            <Label Content="MoneyTerminal C" Margin="20">
-                
-            </Label>
+            <Label Content="MoneyTerminal C" Margin="20"/>
             <Grid MaxWidth="134" Height="20" >
-                <TextBlock x:Name="c1" Text="1 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Text="{Binding Coins1}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"></TextBox>
+                <TextBlock x:Name="c1" Text="1 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Coins1, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45">
+                </TextBox>
             </Grid>
             <Grid MaxWidth="134" Height="20" >
-                <TextBlock x:Name="c2" Text="2 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Text="{Binding Coins2}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"></TextBox>
+                <TextBlock x:Name="c2" Text="2 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Coins2}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"/>
             </Grid>
             <Grid MaxWidth="134" Height="20" >
-                <TextBlock x:Name="c5" Text="5 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Text="{Binding Coins5}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"></TextBox>
+                <TextBlock x:Name="c5" Text="5 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Coins5}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"/>
             </Grid>
             <Grid MaxWidth="134" Height="20" >
-                <TextBlock x:Name="c10" Text="10 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Text="{Binding Coins10}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"></TextBox>
+                <TextBlock x:Name="c10" Text="10 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Coins10}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"/>
             </Grid>
             <Grid MaxWidth="134" Height="20" >
-                <TextBlock x:Name="c25" Text="25 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Text="{Binding Coins25}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"></TextBox>
+                <TextBlock x:Name="c25" Text="25 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Coins25}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"/>
             </Grid>
             <Grid MaxWidth="134" Height="20" >
-                <TextBlock x:Name="c50" Text="50 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" ></TextBlock>
-                <TextBox Text="{Binding Coins50, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"></TextBox>
+                <TextBlock x:Name="c50" Text="50 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
+                <TextBox Text="{Binding Coins50, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"/>
             </Grid>
         </StackPanel>
-        
+
     </Grid>
 </Window>
