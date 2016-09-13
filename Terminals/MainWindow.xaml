@@ -20,9 +20,10 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0">
             <Label Content="Terminal A"/>
+            <TextBox x:Name="DisplayA" Text="{Binding TermA}" Margin="5" TextAlignment="Center"></TextBox>
             <Grid MaxWidth="134" Height="42" Background="BlanchedAlmond">
                 <Button x:Name="a0" Content="0" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
-                <Label Content="Закрыть" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
+                <Label Content="ВКЛ" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Fuchsia">
                 <Button x:Name="a1" Content="1" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
@@ -47,9 +48,10 @@
         </StackPanel>
         <StackPanel Grid.Column="2">
             <Label Content="Terminal B"/>
+            <TextBox x:Name="DisplayB" Text="{Binding TermB}" Margin="5" TextAlignment="Center"></TextBox>
             <Grid MaxWidth="134" Height="42" Background="BlanchedAlmond">
                 <Button x:Name="b0" Content="0" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
-                <Label Content="Закрыть" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
+                <Label Content="ВКЛ" HorizontalAlignment="Right" Margin="0,1,0,0" Height="40"/>
             </Grid>
             <Grid MaxWidth="134" Height="42" Background="Fuchsia">
                 <Button x:Name="b1" Content="1" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" Click="Button_Click"/>
@@ -101,6 +103,7 @@
                 <TextBlock x:Name="c50" Text="50 коп" Width="40" Height="40" HorizontalAlignment="Left" Margin="10,0,0,0" />
                 <TextBox Text="{Binding Coins50, Mode=TwoWay}" HorizontalAlignment="Right" Margin="0,1,0,0"  Width="45"/>
             </Grid>
+            <TextBlock Text="{Binding Check}" MinHeight="100" ScrollViewer.VerticalScrollBarVisibility="Visible"></TextBlock>
         </StackPanel>
 
     </Grid>
