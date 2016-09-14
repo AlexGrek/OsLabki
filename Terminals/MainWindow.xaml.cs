@@ -233,6 +233,7 @@ namespace Terminals
                 if (_registry[2] != 0)
                 {
                     var rest = _registry[2];
+                    Check = $"Calculating rest... ({rest})";
                     _registry[2] = 0;
                     Thread.Sleep(2000);
                     if (Count(rest))
