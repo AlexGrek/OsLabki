@@ -1,18 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Terminals
 {
@@ -24,7 +14,7 @@ namespace Terminals
         private Thread A, B, C;
         private int[] _registry = new int[4];   //terminal A, terminal B, terminal C in, terminal C out
         private string[] _term = { "off", "off" };
-        public Semaphore Sem = new Semaphore(0, 1);
+        public Semaphore Sem = new Semaphore(0, 1), Sem2 = new Semaphore(1, 1);
 
         private string _check = "Initialized" + Environment.NewLine;
         public string Check
@@ -230,6 +220,7 @@ namespace Terminals
             int[] bilets = { 0, 28, 37, 50, 77, 91 };
             var rest = 100 - bilets[k];
             _registry[2] = rest;
+            Sem2.Release();
             Sem.WaitOne();
             return _registry[3] == 1;
         }
@@ -238,6 +229,7 @@ namespace Terminals
         {
             for (;;)
             {
+                Sem2.WaitOne();
                 if (_registry[2] != 0)
                 {
                     var rest = _registry[2];
